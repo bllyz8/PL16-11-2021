@@ -1,0 +1,58 @@
+ <html>
+  <head>
+   <title>Exercício 3</title>
+     </head>
+
+
+<script language="javascript">
+
+     function ex3()
+  {
+  var texto, i, qdeV, qdeC, qdeD, qdeX;
+  texto = document.frmEntrada.txtString.value;
+
+  qdeV = 0;
+  qdeC = 0;
+  qdeD = 0;
+  qdeX = 0;
+
+  for(i=0; i<texto.length; ++i)
+  {
+    if (texto.charAt(i).toUpperCase()=="A" || texto.charAt(i).toUpperCase()=="E" ||
+         texto.charAt(i).toUpperCase()=="I" || texto.charAt(i).toUpperCase()=="O" ||
+         texto.charAt(i).toUpperCase()=="U")
+        {
+            qdeV++;
+        }
+    else
+       if (texto.charCodeAt(i)>=65 && texto.charCodeAt(i)<=90 || 
+            texto.charCodeAt(i)>=97 && texto.charCodeAt(i)<=122)
+           {
+            qdeC++;
+           }
+        else
+           if (texto.charCodeAt(i)>=48 && texto.charCodeAt(i)<=57)
+              {
+                  qdeD++;
+              }  
+           else
+              {
+                  qdeX++;
+              }
+
+    }
+
+    document.write("<table border='1'>");
+    document.write("<tr><td>Qtde de vogais:</td><td>" + qdeV + "</td></tr>");
+    document.write("<tr><td>Qtde de consoantes:</td><td>" + qdeC + "</td></tr>");
+    document.write("<tr><td>Qtde de digitos:</td><td>" + qdeD + "</td></tr>");
+    document.write("<tr><td>Qtde de outros caracteres:</td><td>" + qdeX + "</td></tr>");
+    document.write("</table>");
+   }
+ 
+    </script><body>
+  <form name="frmEntrada">
+      Texto:<input type="text" name="txtString" ><br>
+      <input type="button" name="btnEx3" value="Exercicio 3" onClick="ex3()"><br>
+ </body>
+</html>
