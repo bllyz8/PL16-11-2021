@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exercício 5</title> 
+    <title>exercício 2</title> 
+    <script language="javascript">
+
+      function referencia()
+     function ExibirString()
+    {
+        var nome,sobrenome,nomemeio,nomemeio2;
+        nome= document.frm4.nome.value;
+        nomemeio= document.frm4.nomemeio.value;
+        nomemeio2= document.frm4.nomemeio2.value;
+        sobrenome= document.frm4.sobrenome.value;
+        document.getElementById("referenciabibliografica").innerHTML = "<b>Entrada: </b>" + nome+ " "+ nomemeio+ " " + sobrenome + " "+
+    "<b>Saída: " + sobrenome.toUpperCase()+ "</b>, " + nome + ",  "+ nomemeio.substr(0, 1)+ ",  "+ nomemeio2.substr(0, 1) ;
+
+
+        var numero,string;
+        numero= parseFloat(document.frm2.numero.value);
+        string= document.frm2.string.value;
+        document.getElementById("stringqunt").innerHTML =(string.substring(0,numero));
+    }
+    
+</script>
+</head>
+<body></body>
+    <form name="frm4">
+    Digite_seu_nome: <input type="text" name="nome" ><br>
+    Digite_o_nome_do_meio: <input type="text" name="nomemeio" ><br>
+    Digite_o_outro_nome_do_meio_se_tiver: <input type="text" name="nomemeio2" ><br>
+    Digite_o_ultimo_nome: <input type="text" name="sobrenome" ><br>
+   <input type="button" value="Enviar" onclick="referencia();"> 
+<body>
+    <form name="frm2">
+    Digite_algo: <input type="text" name="string" ><br>
+    Digite_um_numero_inteiro: <input type="number" name="numero" ><br>
+   <input type="button" value="Enviar" onclick="ExibirString();">
+    <br><br>
+    
+    <p id="referenciabibliografica"></p>
+
+    <p id="stringqunt"></p>
+  </form>
+</body>
+</html>
