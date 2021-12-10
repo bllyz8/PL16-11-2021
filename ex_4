@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exercício 4</title> 
+    <script language="javascript">
+
+  function ex4()
+  {
+  var mensagem, semEspacos, invertida, i;
+  mensagem = document.frm4.txtMensagem.value;
+
+  semEspacos = "";
+  for(i=0; i<mensagem.length; ++i)
+  {
+    if (mensagem.charAt(i)!=" ")
+    {
+      semEspacos += mensagem.charAt(i);
+    }
+  }
+
+  invertida = "";
+  for(i=semEspacos.length-1; i>=0; --i)
+  {
+    invertida += semEspacos.charAt(i);
+  }
+
+  document.write("<table border='1'>");
+  document.write("<tr><td>" + semEspacos + "</td></tr>");
+  document.write("<tr><td>" + invertida + "</td></tr>");
+  document.write("<tr><td>" + (semEspacos==invertida?"Palindromo":"Não eh palindromo") + "</td></tr>");
+  document.write("</table>");
+  }
+
+</script>
+</head>
+<body></body>
+    <form name="frm4">
+    texto: <input type="text" name="txtMensagem" ><br>
+    <input type="button" name="btnEx4" value="Exercicio 4" onClick="ex4()"><br>
+    <br><br>
+
+  </form>
+</body>
+</html>
