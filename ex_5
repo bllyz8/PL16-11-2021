@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>exercício 5</title> 
+    <script language="javascript">
+
+      function catálogo()
+    {
+        var nome,sobrenome,nomemeio;
+        nome= document.frm4.nome.value;
+        nomemeio= document.frm4.nomemeio.value;
+        sobrenome= document.frm4.sobrenome.value;
+        document.getElementById("catalogoTelefonico").innerHTML = "<b>Entrada: </b>" + nome+ " "+ nomemeio+ " " + sobrenome + " "+
+    "<b>Saída: </b>" + sobrenome+ " " + nome + " "+ nomemeio+ " " ;
+
+    }
+    
+</script>
+</head>
+<body></body>
+    <form name="frm4">
+    Digite_seu_nome: <input type="text" name="nome" ><br>
+    Digite_o_nome_do_meio: <input type="text" name="nomemeio" ><br>
+    Digite_o_ultimo_nome: <input type="text" name="sobrenome" ><br>
+   <input type="button" value="Enviar" onclick="catálogo();"> 
+    <br><br>
+
+    <p id="catalogoTelefonico"></p>
+
+  </form>
+</body>
+</html>
